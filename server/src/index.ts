@@ -1,10 +1,10 @@
-const num1: number = 15
-const num2: number = 20
+const express = require("express");
+require("dotenv").config();
 
-const sumar = (a: number, b: number) : number => a + b;
+const PORT = process.env.PORT || 3000;
 
-console.log(sumar(num1, num2));
+const server = express();
 
-const nombre: string = "Florencia";
-
-const age: number = 33;
+server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`)
+})
