@@ -17,6 +17,8 @@ export const createUserService = async (userData: IUserDto): Promise<IUser> => {
     return newUser;
 }
 
-export const getUserService = async () => {}
+export const getUsersService = async (): Promise<IUser[]> => {
+    return users;
+}
 
 export const deleteUserService = async () => {}

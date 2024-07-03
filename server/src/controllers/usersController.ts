@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { createUserService, getUserService, deleteUserService } from "../services/userService"
+import { createUserService, getUsersService, deleteUserService } from "../services/userService"
 import IUser from "../interfaces/IUser";
 
 export const createUser = async (req: Request, res: Response) => {
@@ -8,6 +8,9 @@ export const createUser = async (req: Request, res: Response) => {
     res.status(201).json(newUser);
 }
 
-export const getUsers = async () => {}
+export const getUsers = async (req: Request, res: Response) => {
+    const users: IUser[] = await getUsersService();
+    res.status(200).json(users)
+}
 
 export const deleteUser = async () => {}
