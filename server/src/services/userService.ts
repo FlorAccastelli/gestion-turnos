@@ -1,7 +1,7 @@
 import IUserDto from "../dto/UserDto";
 import IUser from "../interfaces/IUser"
 
-const users: IUser[] = [];
+let users: IUser[] = [];
 
 let id: number = 1;
 
@@ -21,4 +21,8 @@ export const getUsersService = async (): Promise<IUser[]> => {
     return users;
 }
 
-export const deleteUserService = async () => {}
+export const deleteUserService = async (id: number): Promise<void> => {
+    users = users.filter((user: IUser) => {
+        return user.id != id;
+    })
+}
