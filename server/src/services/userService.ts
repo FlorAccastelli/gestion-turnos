@@ -21,6 +21,12 @@ export const getUsersService = async (): Promise<IUser[]> => {
     return users;
 }
 
+export const getUserByIdService = async (id: number) => {
+    users = users.filter((user: IUser) => {
+        return user.id === id;
+    })
+}
+
 export const deleteUserService = async (id: number): Promise<void> => {
     users = users.filter((user: IUser) => {
         return user.id != id;
