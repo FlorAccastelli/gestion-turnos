@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { createUserService, getUsersService, deleteUserService, getUserByIdService } from "../services/userService"
+import { createUserService, getUsersService, deleteUserService, getUserByIdService } from "../services/usersService"
 import IUser from "../interfaces/IUser";
 
 export const createUser = async (req: Request, res: Response) => {
