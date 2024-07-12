@@ -1,7 +1,9 @@
 interface IUserDto {
     name: string,
     email: string,
-    active: boolean
+    birthdate: Date,
+    nDni: number,
+    credentialsId: number
 }
 
 export default IUserDto;

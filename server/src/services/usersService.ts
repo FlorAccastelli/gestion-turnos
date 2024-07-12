@@ -10,7 +10,9 @@ export const createUserService = async (userData: IUserDto): Promise<IUser> => {
         id,
         name: userData.name,
         email: userData.email,
-        active: userData.active
+        birthdate: userData.birthdate,
+        nDni: userData.nDni,
+        credentialsId: userData.credentialsId
     }
     users.push(newUser);
     id++;
